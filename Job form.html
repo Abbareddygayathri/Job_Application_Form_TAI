@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="password"],
+        select {
+            padding: 5px;
+            width: 200px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 5px 15px;
+            margin-right: 10px;
+        }
+        .checkbox-group {
+            margin: 10px 0;
+        }
+        .checkbox-group label {
+            width: auto;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Job Application Form</h1>
+    
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div class="form-group">
+                <label for="firstName">First Name*</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name*</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" placeholder="dd/mm/yyyy">
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male" style="width: auto;">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female" style="width: auto;">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other" style="width: auto;">Other</label>
+            </div>
+            <div class="form-group">
+                <label for="profile">Profile Picture*</label>
+                <input type="file" id="profile" name="profile">
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Contact Information</legend>
+            <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number*</label>
+                <input type="tel" id="phone" name="phone" placeholder="10-digit number" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address">
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="india">India</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="canada">Canada</option>
+                    <option value="australia">Australia</option>
+                </select>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Education Background</legend>
+            <div class="form-group">
+                <label for="qualification">Highest Qualification</label>
+                <select id="qualification" name="qualification">
+                    <option value="high_school">High School</option>
+                    <option value="bachelors">Bachelor's</option>
+                    <option value="masters">Master's</option>
+                    <option value="graduate" selected>Graduate</option>
+                    <option value="phd">PhD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="specialization">Specialization</label>
+                <input type="text" id="specialization" name="specialization">
+            </div>
+            <div class="form-group">
+                <label for="graduation_year">Year of Graduation</label>
+                <input type="number" id="graduation_year" name="graduation_year" min="1950" max="2025">
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Job Preferences</legend>
+            <div class="form-group">
+                <label for="role">Preferred Role</label>
+                <input type="text" id="role" name="role">
+            </div>
+            <div class="form-group">
+                <label for="salary">Expected Salary</label>
+                <input type="text" id="salary" name="salary">
+            </div>
+            <div class="form-group">
+                <label>Preferred Locations</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="bangalore" name="locations[]" value="bangalore">
+                    <label for="bangalore">Bangalore</label>
+                    <input type="checkbox" id="delhi" name="locations[]" value="delhi">
+                    <label for="delhi">Delhi</label>
+                    <input type="checkbox" id="remote" name="locations[]" value="remote">
+                    <label for="remote">Remote</label>
+                    <input type="checkbox" id="pune" name="locations[]" value="pune">
+                    <label for="pune">Pune</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="relocate">Willing to Relocate?</label>
+                <input type="checkbox" id="relocate" name="relocate">
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Create Account</legend>
+            <div class="form-group">
+                <label for="password">Password*</label>
+                <input type="password" id="password" name="password" placeholder="Min 6 characters" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password*</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Resume</legend>
+            <div class="form-group">
+                <label for="resume">Upload Resume (PDF only)*</label>
+                <input type="file" id="resume" name="resume" accept=".pdf" required>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Agreement</legend>
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" style="width: auto;">I agree to the terms and conditions*</label>
+            </div>
+        </fieldset>
+        
+        <div class="form-group">
+            <input type="submit" value="Submit Application">
+            <input type="reset" value="Reset Form">
+        </div>
+    </form>
+</body>
+</html>
