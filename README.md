@@ -51,12 +51,5 @@ This repository only includes the front-end form. You'll need to implement serve
 - Handle file uploads
 - Send confirmation emails
 
-## Browser Compatibility
-Tested and compatible with:
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
 ## License
 This project is available under the MIT License - see the LICENSE file for details.
